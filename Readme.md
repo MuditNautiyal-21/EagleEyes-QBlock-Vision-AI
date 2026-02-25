@@ -77,11 +77,9 @@ Validated on **2,177 images** from an extended production dataset:
 
 ## Demo
 
-<p align="center">
-  <video src="GIF/demo.mp4" width="90%" autoplay loop muted playsinline>
-    Your browser does not support the video tag.
-  </video>
-</p>
+https://github.com/user-attachments/assets/placeholder
+
+> *Click above to watch the real-time inspection demo. If the video doesn't render, [download it here](GIF/demo.mp4).*
 
 ## Dashboard
 
