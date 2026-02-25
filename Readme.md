@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/YOLOv8-Ultralytics-00FFFF?style=for-the-badge&logo=yolo&logoColor=black" alt="YOLOv8"/>
   <img src="https://img.shields.io/badge/OpenCV-4.8+-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
   <img src="https://img.shields.io/badge/ONNX_Runtime-Inference-005CED?style=for-the-badge&logo=onnx&logoColor=white" alt="ONNX"/>
-  <img src="https://img.shields.io/badge/Accuracy-100%25-00C853?style=for-the-badge" alt="Accuracy"/>
+  <img src="https://img.shields.io/badge/Accuracy-99.91%25-00C853?style=for-the-badge" alt="Accuracy"/>
 </p>
 
 ---
