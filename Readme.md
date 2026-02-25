@@ -78,12 +78,8 @@ Validated on **2,177 images** from an extended production dataset:
 ## Demo
 
 <p align="center">
-  <a href="https://github.com/MuditNautiyal-21/EagleEyes-QBlock-Vision-AI/raw/main/GIF/demo.mp4">
-    <img src="GIF/dashboard_ok.png" width="70%" alt="Click to watch demo video"/>
-  </a>
+  <img src="GIF/demo.gif" width="90%" alt="Eagle Eyes — real-time defect detection demo"/>
 </p>
-
-> 🎬 *Click the image above to download and watch the full real-time inspection demo.*
 
 ## Dashboard
 
