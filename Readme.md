@@ -77,9 +77,7 @@ Validated on **2,177 images** from an extended production dataset:
 
 ## Demo
 
-<p align="center">
-  <img src="GIF/demo.gif" width="90%" alt="Eagle Eyes — real-time defect detection demo"/>
-</p>
+https://github.com/user-attachments/assets/7f7259d9-337a-4dc4-a049-3720be4c7a98
 
 ## Dashboard
 
