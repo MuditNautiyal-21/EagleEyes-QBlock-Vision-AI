@@ -66,7 +66,7 @@ Validated on **2,177 images** from an extended production dataset:
 
 | Metric | Value |
 |---|---|
-| **Overall Accuracy** | **100%** |
+| **Overall Accuracy** | **99.91%** |
 | OK Images (True Positives) | 54 / 54 |
 | NG Images (True Negatives) | 2,123 / 2,123 |
 | False Positives | 0 |
