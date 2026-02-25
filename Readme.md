@@ -77,9 +77,13 @@ Validated on **2,177 images** from an extended production dataset:
 
 ## Demo
 
-https://github.com/user-attachments/assets/placeholder
+<p align="center">
+  <a href="https://github.com/MuditNautiyal-21/EagleEyes-QBlock-Vision-AI/raw/main/GIF/demo.mp4">
+    <img src="GIF/dashboard_ok.png" width="70%" alt="Click to watch demo video"/>
+  </a>
+</p>
 
-> *Click above to watch the real-time inspection demo. If the video doesn't render, [download it here](GIF/demo.mp4).*
+> 🎬 *Click the image above to download and watch the full real-time inspection demo.*
 
 ## Dashboard
 
