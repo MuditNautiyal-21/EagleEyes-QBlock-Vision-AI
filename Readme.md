@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">🦅 Eagle Eyes — Vision AI for Print Defect Detection</h1>
+  <h1 align="center">🦅 Eagle Eyes - Vision AI for Print Defect Detection</h1>
   <p align="center">
     YOLOv8-powered quality inspection for casino payout ticket printing
   </p>
@@ -17,7 +17,7 @@
 
 ## What & Why
 
-Casino payout ticket printers produce **~30 million tickets per day** across the industry. A **4% defect rate** means over a million potentially misread tickets daily — leading to revenue disputes, regulatory risk, and customer complaints.
+Casino payout ticket printers produce **~30 million tickets per day** across the industry. A **4% defect rate** means over a million potentially misread tickets daily - leading to revenue disputes, regulatory risk, and customer complaints.
 
 **Eagle Eyes** is an automated visual inspection system that detects **Q-Block alignment markers** on printed tickets and validates print quality through a multi-gate decision pipeline. It replaces manual spot-checking with deterministic, auditable, real-time inspection.
 
@@ -121,7 +121,7 @@ python app/runner_visualizer.py
 ```
 
 1. Drop ticket images into `data/incoming/`
-2. The dashboard opens automatically — images are evaluated in real time
+2. The dashboard opens automatically - images are evaluated in real time
 3. Results are logged to `data/results/visualizer_results.csv`
 4. Images are routed to `data/Good_Images/` (OK) or `data/No_Good_Images/` (NG)
 5. Press **`q`** to exit
@@ -170,9 +170,9 @@ EagleEyes_PROD/
 
 ## Known Limitations
 
-- **YOLO hallucinations** — False positives can increase when the recovery pass is triggered at very low confidence thresholds
-- **Ink density sensitivity** — Changes in printer exposure or lighting conditions can shift grayscale/dark-ratio values outside calibrated ranges
-- **Single ticket layout** — Currently tuned for specific Q-Block layouts (14 or 21 markers); new layouts require re-calibration
+- **YOLO hallucinations** - False positives can increase when the recovery pass is triggered at very low confidence thresholds
+- **Ink density sensitivity** - Changes in printer exposure or lighting conditions can shift grayscale/dark-ratio values outside calibrated ranges
+- **Single ticket layout** - Currently tuned for specific Q-Block layouts (14 or 21 markers); new layouts require re-calibration
 
 ---
 
