@@ -1,0 +1,781 @@
+{
+  "meta": {
+    "weights_path": "models/qblock_20251107_0033/weights/best.onnx",
+    "imgsz": 1024,
+    "good_key": "OK",
+    "classes": [
+      "big_q_block"
+    ],
+    "notes": "Unified rules: thresholds/ranges shared for old & new EXT705 datasets. Per-dataset statistics are stored under dataset_stats.old and dataset_stats.new."
+  },
+  "conf_thresholds": {
+    "big_q_block": {
+      "count": 1932,
+      "mean": 0.9313344152385897,
+      "std": 0.0051948305417104735,
+      "median": 0.9320617914199829,
+      "p10": 0.9238935530185699,
+      "p90": 0.937827181816101
+    },
+    "small_q_block": {
+      "count": 2877,
+      "mean": 0.9008418480073531,
+      "std": 0.09004442292347929,
+      "median": 0.9214017987251282,
+      "p10": 0.8929811000823975,
+      "p90": 0.9283507347106934
+    },
+    "suggested_min": {
+      "big_q_block": 0.8738935530185699,
+      "small_q_block": 0.8429811000823975
+    }
+  },
+  "area_fraction": {
+    "big_q_block": {
+      "count": 1932,
+      "mean": 0.0002822416346185401,
+      "std": 3.605453468952481e-06,
+      "median": 0.00028194540936965495,
+      "p10": 0.0002778294903691858,
+      "p90": 0.0002869863179512322
+    },
+    "small_q_block": {
+      "count": 2877,
+      "mean": 0.00014158061302486656,
+      "std": 2.593492999813834e-06,
+      "median": 0.0001416215964127332,
+      "p10": 0.00013836979342158885,
+      "p90": 0.00014467510336544365
+    },
+    "suggested_min_frac_of_median": 0.6
+  },
+  "relative_position": {
+    "bb_nn_diag_frac": {
+      "min": 0.09523582589394669,
+      "max": 0.09671900437638731,
+      "median": 0.09639306433949348,
+      "mad": 0.00021679468232360796
+    },
+    "ss_nn_diag_frac": {
+      "min": 0.09538911076591765,
+      "max": 0.09677813852904868,
+      "median": 0.096334305456262,
+      "mad": 0.00016817241867291824
+    },
+    "bs_nn_diag_frac": {
+      "min": 0.04219054229270876,
+      "max": 0.0891457534841278,
+      "median": 0.04306570134334802,
+      "mad": 0.0002011511234069666
+    },
+    "bs_angle_deg": {
+      "min": -113.25200812616642,
+      "max": -26.36709915068817,
+      "median": -112.71679303293992,
+      "mad": 0.14856987727654128
+    },
+    "suggested_z_threshold": 3.0
+  },
+  "count_rules": {
+    "mode": "any",
+    "big_expected": 21,
+    "small_expected": 21,
+    "big_expected_any": [
+      14,
+      21
+    ],
+    "small_expected_any": [
+      21
+    ],
+    "tolerance": 1,
+    "big_tolerance_per_N": {
+      "14": 0,
+      "21": 1
+    }
+  },
+  "count_inference": {
+    "primary": {
+      "imgsz": 1280,
+      "conf": 0.05,
+      "iou": 0.5,
+      "tta": false
+    },
+    "recovery": {
+      "imgsz": 1280,
+      "conf": 0.001,
+      "iou": 0.45,
+      "tta": true
+    }
+  },
+  "count_verification": {
+    "good_train_images": 110,
+    "exact_pass": 110,
+    "rate": 1.0,
+    "timestamp": "2025-11-07T15:43:15"
+  },
+  "visibility_thresholds": {
+    "conf_min": {
+      "big_q_block": 0.9099007821083069,
+      "small_q_block": 0.6829767203330994
+    },
+    "area_min": {
+      "big_q_block": 0.0002719362893506217,
+      "small_q_block": 0.00013172025261557507
+    },
+    "tolerance": {
+      "big_q_block": {
+        "base": 1,
+        "for_21": 3
+      },
+      "small_q_block": 1
+    },
+    "ranges": {
+      "conf": {
+        "big_q_block": {
+          "min": 0.9099007821083069,
+          "max": 0.9404336833953857
+        },
+        "small_q_block": {
+          "min": 0.6829767203330994,
+          "max": 0.932012858390808
+        }
+      },
+      "area_frac": {
+        "big_q_block": {
+          "min": 0.0002719362893506217,
+          "max": 0.0002935328695027898
+        },
+        "small_q_block": {
+          "min": 0.00013172025261557507,
+          "max": 0.00015017328984357612
+        }
+      }
+    }
+  },
+  "visibility_verification": {
+    "good_train_images": 110,
+    "pass": 110,
+    "rate": 1.0,
+    "timestamp": "2025-11-07T16:33:44"
+  },
+  "relative_position_verification": {
+    "good_train_images": 110,
+    "pass": 110,
+    "rate": 1.0,
+    "timestamp": "2025-11-07T16:41:53"
+  },
+  "density_thresholds": {
+    "summary": {
+      "big_q_block": {
+        "mean_gray": {
+          "count": 1540,
+          "min": 38.3046875,
+          "max": 65.57638888888889,
+          "median": 52.68359375,
+          "p10": 44.90546875,
+          "p90": 61.09027777777778
+        },
+        "dark_ratio": {
+          "count": 1540,
+          "min": 0.6484375,
+          "max": 0.9296875,
+          "median": 0.8125,
+          "p10": 0.765625,
+          "p90": 0.8666666666666667
+        }
+      },
+      "small_q_block": {
+        "mean_gray": {
+          "count": 2310,
+          "min": 46.43333333333333,
+          "max": 81.08974358974359,
+          "median": 63.730769230769226,
+          "p10": 54.89833333333333,
+          "p90": 72.63692307692307
+        },
+        "dark_ratio": {
+          "count": 2310,
+          "min": 0.4666666666666667,
+          "max": 0.9076923076923077,
+          "median": 0.7230769230769231,
+          "p10": 0.7,
+          "p90": 0.7916666666666666
+        }
+      }
+    },
+    "ranges": {
+      "mean_gray": {
+        "big_q_block": {
+          "min": 33.83,
+          "max": 66.39453993055555
+        },
+        "small_q_block": {
+          "min": 43.12,
+          "max": 82.1294358974359
+        }
+      },
+      "dark_ratio": {
+        "big_q_block": {
+          "min": 0.6334375,
+          "max": 0.9296875
+        },
+        "small_q_block": {
+          "min": 0.46166666666666667,
+          "max": 0.9076923076923077
+        }
+      }
+    },
+    "notes": "mean_gray: 0(black)\u2192255(white); dark_ratio: fraction below Otsu threshold (ink coverage proxy). | relaxed big_q_block.dark_ratio.min by <=0.02 with soft_floor=(p10-0.10). | lowered big.dark_ratio.min 0.666->0.626 | snap floors -> big:0.626->0.643, small:0.467->0.462"
+  },
+  "density_verification": {
+    "good_train_images": 110,
+    "pass": 110,
+    "rate": 1.0,
+    "timestamp": "2025-11-07T17:00:18"
+  },
+  "block_integrity": {
+    "big_q_block": {
+      "enabled": false,
+      "column_outlier_z": 3.5,
+      "min_bad_span_frac": 0.03,
+      "notes": "Currently disabled for gating. When enabled, this detects vertical line artifacts inside big_q_block by column-wise intensity outliers; tuned conservatively based on GOOD images."
+    }
+  },
+  "gate_train_OK": {
+    "good_train_images": 110,
+    "pass": 110,
+    "rate": 1.0,
+    "timestamp": "2025-11-07T19:56:39"
+  },
+  "gate_train_OK_strict": {
+    "good_train_images": 110,
+    "pass": 110,
+    "rate": 1.0,
+    "timestamp": "2025-11-07T20:03:14"
+  },
+  "gate_ext705": {
+    "ok_total": 54,
+    "ok_pass": 54,
+    "ng_total": 2123,
+    "ng_correct_fail": 2123,
+    "ok_acc": 1.0,
+    "ng_acc": 1.0,
+    "tp": 54,
+    "tn": 2123,
+    "fp": 0,
+    "fn": 0,
+    "overall_acc": 1.0,
+    "timestamp": "2025-11-17T20:07:42",
+    "profiling": {
+      "load_rules": 0.0,
+      "init_model_device": 0.018009424209594727,
+      "scan_folders": 0.009990930557250977,
+      "detections_primary": 172.4783170223236,
+      "evaluate_loop": 9.046095371246338,
+      "loop_time": 9.058095932006836,
+      "total_time": 181.5644133090973
+    }
+  },
+  "dataset_stats": {
+    "old": {
+      "meta": {
+        "weights_path": "models/qblock_20251107_0033/weights/best.onnx",
+        "imgsz": 1024,
+        "good_key": "OK",
+        "classes": [
+          "big_q_block"
+        ],
+        "notes": "Thresholds derived from GOOD images only."
+      },
+      "conf_thresholds": {
+        "big_q_block": {
+          "count": 1932,
+          "mean": 0.9313344152385897,
+          "std": 0.0051948305417104735,
+          "median": 0.9320617914199829,
+          "p10": 0.9238935530185699,
+          "p90": 0.937827181816101
+        },
+        "small_q_block": {
+          "count": 2877,
+          "mean": 0.9008418480073531,
+          "std": 0.09004442292347929,
+          "median": 0.9214017987251282,
+          "p10": 0.8929811000823975,
+          "p90": 0.9283507347106934
+        },
+        "suggested_min": {
+          "big_q_block": 0.8738935530185699,
+          "small_q_block": 0.8429811000823975
+        }
+      },
+      "area_fraction": {
+        "big_q_block": {
+          "count": 1932,
+          "mean": 0.0002822416346185401,
+          "std": 3.605453468952481e-06,
+          "median": 0.00028194540936965495,
+          "p10": 0.0002778294903691858,
+          "p90": 0.0002869863179512322
+        },
+        "small_q_block": {
+          "count": 2877,
+          "mean": 0.00014158061302486656,
+          "std": 2.593492999813834e-06,
+          "median": 0.0001416215964127332,
+          "p10": 0.00013836979342158885,
+          "p90": 0.00014467510336544365
+        },
+        "suggested_min_frac_of_median": 0.6
+      },
+      "relative_position": {
+        "bb_nn_diag_frac": {
+          "min": 0.09523582589394669,
+          "max": 0.09671900437638731,
+          "median": 0.09639306433949348,
+          "mad": 0.00021679468232360796
+        },
+        "ss_nn_diag_frac": {
+          "min": 0.09538911076591765,
+          "max": 0.09677813852904868,
+          "median": 0.096334305456262,
+          "mad": 0.00016817241867291824
+        },
+        "bs_nn_diag_frac": {
+          "min": 0.04219054229270876,
+          "max": 0.0891457534841278,
+          "median": 0.04306570134334802,
+          "mad": 0.0002011511234069666
+        },
+        "bs_angle_deg": {
+          "min": -113.25200812616642,
+          "max": -26.36709915068817,
+          "median": -112.71679303293992,
+          "mad": 0.14856987727654128
+        },
+        "suggested_z_threshold": 3.0
+      },
+      "count_rules": {
+        "mode": "any",
+        "big_expected": 21,
+        "small_expected": 21,
+        "big_expected_any": [
+          14,
+          21
+        ],
+        "small_expected_any": [
+          21
+        ],
+        "tolerance": 1
+      },
+      "count_inference": {
+        "primary": {
+          "imgsz": 1280,
+          "conf": 0.05,
+          "iou": 0.5,
+          "tta": false
+        },
+        "recovery": {
+          "imgsz": 1280,
+          "conf": 0.001,
+          "iou": 0.45,
+          "tta": true
+        }
+      },
+      "count_verification": {
+        "good_train_images": 110,
+        "exact_pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T15:43:15"
+      },
+      "visibility_thresholds": {
+        "conf_min": {
+          "big_q_block": 0.9099007821083069,
+          "small_q_block": 0.6829767203330994
+        },
+        "area_min": {
+          "big_q_block": 0.0002719362893506217,
+          "small_q_block": 0.00013172025261557507
+        },
+        "tolerance": {
+          "big_q_block": 1,
+          "small_q_block": 1
+        },
+        "ranges": {
+          "conf": {
+            "big_q_block": {
+              "min": 0.9099007821083069,
+              "max": 0.9404336833953857
+            },
+            "small_q_block": {
+              "min": 0.6829767203330994,
+              "max": 0.932012858390808
+            }
+          },
+          "area_frac": {
+            "big_q_block": {
+              "min": 0.0002719362893506217,
+              "max": 0.0002935328695027898
+            },
+            "small_q_block": {
+              "min": 0.00013172025261557507,
+              "max": 0.00015017328984357612
+            }
+          }
+        }
+      },
+      "visibility_verification": {
+        "good_train_images": 110,
+        "pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T16:33:44"
+      },
+      "relative_position_verification": {
+        "good_train_images": 110,
+        "pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T16:41:53"
+      },
+      "density_thresholds": {
+        "summary": {
+          "big_q_block": {
+            "mean_gray": {
+              "count": 1540,
+              "min": 38.3046875,
+              "max": 65.57638888888889,
+              "median": 52.68359375,
+              "p10": 44.90546875,
+              "p90": 61.09027777777778
+            },
+            "dark_ratio": {
+              "count": 1540,
+              "min": 0.6484375,
+              "max": 0.9296875,
+              "median": 0.8125,
+              "p10": 0.765625,
+              "p90": 0.8666666666666667
+            }
+          },
+          "small_q_block": {
+            "mean_gray": {
+              "count": 2310,
+              "min": 46.43333333333333,
+              "max": 81.08974358974359,
+              "median": 63.730769230769226,
+              "p10": 54.89833333333333,
+              "p90": 72.63692307692307
+            },
+            "dark_ratio": {
+              "count": 2310,
+              "min": 0.4666666666666667,
+              "max": 0.9076923076923077,
+              "median": 0.7230769230769231,
+              "p10": 0.7,
+              "p90": 0.7916666666666666
+            }
+          }
+        },
+        "ranges": {
+          "mean_gray": {
+            "big_q_block": {
+              "min": 33.83,
+              "max": 66.39453993055555
+            },
+            "small_q_block": {
+              "min": 43.12,
+              "max": 82.1294358974359
+            }
+          },
+          "dark_ratio": {
+            "big_q_block": {
+              "min": 0.6334375,
+              "max": 0.9296875
+            },
+            "small_q_block": {
+              "min": 0.46166666666666667,
+              "max": 0.9076923076923077
+            }
+          }
+        },
+        "notes": "mean_gray: 0(black)\u2192255(white); dark_ratio: fraction below Otsu threshold (ink coverage proxy). | relaxed big_q_block.dark_ratio.min by <=0.02 with soft_floor=(p10-0.10). | lowered big.dark_ratio.min 0.666->0.626 | snap floors -> big:0.626->0.643, small:0.467->0.462"
+      },
+      "density_verification": {
+        "good_train_images": 110,
+        "pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T17:00:18"
+      },
+      "gate_train_OK": {
+        "good_train_images": 110,
+        "pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T19:56:39"
+      },
+      "gate_train_OK_strict": {
+        "good_train_images": 110,
+        "pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T20:03:14"
+      },
+      "gate_ext705": {
+        "ok_total": 138,
+        "ok_pass": 0,
+        "ng_total": 567,
+        "ng_correct_fail": 567,
+        "ok_acc": 0.0,
+        "ng_acc": 1.0,
+        "timestamp": "2025-11-09T19:25:22"
+      }
+    },
+    "new": {
+      "meta": {
+        "weights_path": "models/qblock_20251107_0033/weights/best.onnx",
+        "imgsz": 1024,
+        "good_key": "OK",
+        "classes": [
+          "big_q_block"
+        ],
+        "notes": "Thresholds derived from GOOD images only."
+      },
+      "conf_thresholds": {
+        "big_q_block": {
+          "count": 1932,
+          "mean": 0.9313344152385897,
+          "std": 0.0051948305417104735,
+          "median": 0.9320617914199829,
+          "p10": 0.9238935530185699,
+          "p90": 0.937827181816101
+        },
+        "small_q_block": {
+          "count": 2877,
+          "mean": 0.9008418480073531,
+          "std": 0.09004442292347929,
+          "median": 0.9214017987251282,
+          "p10": 0.8929811000823975,
+          "p90": 0.9283507347106934
+        },
+        "suggested_min": {
+          "big_q_block": 0.8738935530185699,
+          "small_q_block": 0.8429811000823975
+        }
+      },
+      "area_fraction": {
+        "big_q_block": {
+          "count": 1932,
+          "mean": 0.0002822416346185401,
+          "std": 3.605453468952481e-06,
+          "median": 0.00028194540936965495,
+          "p10": 0.0002778294903691858,
+          "p90": 0.0002869863179512322
+        },
+        "small_q_block": {
+          "count": 2877,
+          "mean": 0.00014158061302486656,
+          "std": 2.593492999813834e-06,
+          "median": 0.0001416215964127332,
+          "p10": 0.00013836979342158885,
+          "p90": 0.00014467510336544365
+        },
+        "suggested_min_frac_of_median": 0.6
+      },
+      "relative_position": {
+        "bb_nn_diag_frac": {
+          "min": 0.09523582589394669,
+          "max": 0.09671900437638731,
+          "median": 0.09639306433949348,
+          "mad": 0.00021679468232360796
+        },
+        "ss_nn_diag_frac": {
+          "min": 0.09538911076591765,
+          "max": 0.09677813852904868,
+          "median": 0.096334305456262,
+          "mad": 0.00016817241867291824
+        },
+        "bs_nn_diag_frac": {
+          "min": 0.04219054229270876,
+          "max": 0.0891457534841278,
+          "median": 0.04306570134334802,
+          "mad": 0.0002011511234069666
+        },
+        "bs_angle_deg": {
+          "min": -113.25200812616642,
+          "max": -26.36709915068817,
+          "median": -112.71679303293992,
+          "mad": 0.14856987727654128
+        },
+        "suggested_z_threshold": 3.0
+      },
+      "count_rules": {
+        "mode": "any",
+        "big_expected": 21,
+        "small_expected": 21,
+        "big_expected_any": [
+          14,
+          21
+        ],
+        "small_expected_any": [
+          21
+        ],
+        "tolerance": 1
+      },
+      "count_inference": {
+        "primary": {
+          "imgsz": 1280,
+          "conf": 0.05,
+          "iou": 0.5,
+          "tta": false
+        },
+        "recovery": {
+          "imgsz": 1280,
+          "conf": 0.001,
+          "iou": 0.45,
+          "tta": true
+        }
+      },
+      "count_verification": {
+        "good_train_images": 110,
+        "exact_pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T15:43:15"
+      },
+      "visibility_thresholds": {
+        "conf_min": {
+          "big_q_block": 0.9099007821083069,
+          "small_q_block": 0.6829767203330994
+        },
+        "area_min": {
+          "big_q_block": 0.0002719362893506217,
+          "small_q_block": 0.00013172025261557507
+        },
+        "tolerance": {
+          "big_q_block": 1,
+          "small_q_block": 1
+        },
+        "ranges": {
+          "conf": {
+            "big_q_block": {
+              "min": 0.9099007821083069,
+              "max": 0.9404336833953857
+            },
+            "small_q_block": {
+              "min": 0.6829767203330994,
+              "max": 0.932012858390808
+            }
+          },
+          "area_frac": {
+            "big_q_block": {
+              "min": 0.0002719362893506217,
+              "max": 0.0002935328695027898
+            },
+            "small_q_block": {
+              "min": 0.00013172025261557507,
+              "max": 0.00015017328984357612
+            }
+          }
+        }
+      },
+      "visibility_verification": {
+        "good_train_images": 110,
+        "pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T16:33:44"
+      },
+      "relative_position_verification": {
+        "good_train_images": 110,
+        "pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T16:41:53"
+      },
+      "density_thresholds": {
+        "summary": {
+          "big_q_block": {
+            "mean_gray": {
+              "count": 1540,
+              "min": 38.3046875,
+              "max": 65.57638888888889,
+              "median": 52.68359375,
+              "p10": 44.90546875,
+              "p90": 61.09027777777778
+            },
+            "dark_ratio": {
+              "count": 1540,
+              "min": 0.6484375,
+              "max": 0.9296875,
+              "median": 0.8125,
+              "p10": 0.765625,
+              "p90": 0.8666666666666667
+            }
+          },
+          "small_q_block": {
+            "mean_gray": {
+              "count": 2310,
+              "min": 46.43333333333333,
+              "max": 81.08974358974359,
+              "median": 63.730769230769226,
+              "p10": 54.89833333333333,
+              "p90": 72.63692307692307
+            },
+            "dark_ratio": {
+              "count": 2310,
+              "min": 0.4666666666666667,
+              "max": 0.9076923076923077,
+              "median": 0.7230769230769231,
+              "p10": 0.7,
+              "p90": 0.7916666666666666
+            }
+          }
+        },
+        "ranges": {
+          "mean_gray": {
+            "big_q_block": {
+              "min": 33.83,
+              "max": 66.39453993055555
+            },
+            "small_q_block": {
+              "min": 43.12,
+              "max": 82.1294358974359
+            }
+          },
+          "dark_ratio": {
+            "big_q_block": {
+              "min": 0.6334375,
+              "max": 0.9296875
+            },
+            "small_q_block": {
+              "min": 0.46166666666666667,
+              "max": 0.9076923076923077
+            }
+          }
+        },
+        "notes": "mean_gray: 0(black)\u2192255(white); dark_ratio: fraction below Otsu threshold (ink coverage proxy). | relaxed big_q_block.dark_ratio.min by <=0.02 with soft_floor=(p10-0.10). | lowered big.dark_ratio.min 0.666->0.626 | snap floors -> big:0.626->0.643, small:0.467->0.462"
+      },
+      "density_verification": {
+        "good_train_images": 110,
+        "pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T17:00:18"
+      },
+      "gate_train_OK": {
+        "good_train_images": 110,
+        "pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T19:56:39"
+      },
+      "gate_train_OK_strict": {
+        "good_train_images": 110,
+        "pass": 110,
+        "rate": 1.0,
+        "timestamp": "2025-11-07T20:03:14"
+      },
+      "gate_ext705": {
+        "ok_total": 138,
+        "ok_pass": 0,
+        "ng_total": 567,
+        "ng_correct_fail": 567,
+        "ok_acc": 0.0,
+        "ng_acc": 1.0,
+        "timestamp": "2025-11-09T19:25:22"
+      }
+    }
+  }
+}

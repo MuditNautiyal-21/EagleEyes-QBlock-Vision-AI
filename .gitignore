@@ -1,0 +1,30 @@
+# ─── Python ───
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# ─── Model weights ───
+*.pt
+*.onnx
+
+# ─── Data directories (keep folder structure via .gitkeep) ───
+data/incoming/*
+data/Good_Images/*
+data/No_Good_Images/*
+data/test/*
+data/debug/*
+data/results/*
+!data/**/.gitkeep
+
+# ─── Logs ───
+logs/
+
+# ─── Environment ───
+.env
+.venv/
+
+# ─── OS / Editor ───
+.DS_Store
+Thumbs.db
+.vscode/

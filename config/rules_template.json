@@ -1,0 +1,108 @@
+{
+  "_comment": "TEMPLATE — Replace <placeholders> with your calibrated values. See ARCHITECTURE.md for what each section controls.",
+
+  "meta": {
+    "_comment": "Global model settings — path to exported ONNX weights and input resolution.",
+    "weights_path": "<path/to/model/weights/best.onnx>",
+    "imgsz": "<input_resolution, e.g. 1024>",
+    "good_key": "OK",
+    "classes": ["big_q_block"]
+  },
+
+  "count_rules": {
+    "_comment": "Expected marker counts per layout. 'mode: any' means the count must match ONE of the listed values. Tolerance allows ±N before triggering recovery.",
+    "mode": "any",
+    "big_expected_any": ["<layout_count_1>", "<layout_count_2>"],
+    "tolerance": "<tolerance_N>",
+    "big_tolerance_per_N": {
+      "<layout_count_1>": "<tolerance_for_layout_1>",
+      "<layout_count_2>": "<tolerance_for_layout_2>"
+    }
+  },
+
+  "count_inference": {
+    "_comment": "YOLO inference parameters. Primary pass uses normal confidence; recovery pass drops confidence and enables TTA to rescue missed detections.",
+    "primary": {
+      "imgsz": "<inference_resolution>",
+      "conf": "<confidence_threshold, e.g. 0.05>",
+      "iou": "<nms_iou_threshold>",
+      "tta": false
+    },
+    "recovery": {
+      "imgsz": "<inference_resolution>",
+      "conf": "<very_low_confidence, e.g. 0.001>",
+      "iou": "<nms_iou_threshold>",
+      "tta": true
+    }
+  },
+
+  "visibility_thresholds": {
+    "_comment": "Per-block quality checks. Each detected marker must have confidence and area-fraction within these bounds. Tolerance = how many blocks can fall outside before the gate fails.",
+    "conf_min": {
+      "big_q_block": "<confidence_min>"
+    },
+    "area_min": {
+      "big_q_block": "<area_fraction_min>"
+    },
+    "tolerance": {
+      "big_q_block": {
+        "base": "<base_tolerance>",
+        "for_21": "<tolerance_for_21_layout>"
+      }
+    },
+    "ranges": {
+      "conf": {
+        "big_q_block": {
+          "min": "<confidence_range_min>",
+          "max": "<confidence_range_max>"
+        }
+      },
+      "area_frac": {
+        "big_q_block": {
+          "min": "<area_fraction_range_min>",
+          "max": "<area_fraction_range_max>"
+        }
+      }
+    }
+  },
+
+  "density_thresholds": {
+    "_comment": "Ink density validation. For each detected block, grayscale mean and dark-pixel ratio are computed from a cropped region. The gate uses MEDIAN statistics across all blocks.",
+    "ranges": {
+      "mean_gray": {
+        "_comment": "0 = pure black, 255 = pure white. Lower values = more ink.",
+        "big_q_block": {
+          "min": "<gray_min>",
+          "max": "<gray_max>"
+        }
+      },
+      "dark_ratio": {
+        "_comment": "Fraction of pixels below Otsu threshold. Higher = more ink coverage.",
+        "big_q_block": {
+          "min": "<dark_ratio_min>",
+          "max": "<dark_ratio_max>"
+        }
+      }
+    }
+  },
+
+  "relative_position": {
+    "_comment": "Spatial consistency checks. Median pairwise distance between big-block centers (normalized by image diagonal). Ensures markers form the expected grid pattern.",
+    "bb_nn_diag_frac": {
+      "min": "<min_normalized_distance>",
+      "max": "<max_normalized_distance>",
+      "median": "<calibrated_median>",
+      "mad": "<median_absolute_deviation>"
+    },
+    "suggested_z_threshold": "<z_score_threshold, e.g. 3.0>"
+  },
+
+  "block_integrity": {
+    "_comment": "Optional sub-block analysis. When enabled, detects vertical line artifacts inside markers via column-wise intensity outliers.",
+    "big_q_block": {
+      "enabled": false,
+      "column_outlier_z": "<z_threshold>",
+      "min_bad_span_frac": "<min_fraction_for_failure>"
+    }
+  }
+}
