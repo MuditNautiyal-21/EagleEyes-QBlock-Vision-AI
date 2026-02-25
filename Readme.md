@@ -69,7 +69,7 @@ Validated on **2,177 images** from an extended production dataset:
 | **Overall Accuracy** | **99.91%** |
 | OK Images (True Positives) | 54 / 54 |
 | NG Images (True Negatives) | 2,123 / 2,123 |
-| False Positives | 0 |
+| False Positives | 3 |
 | False Negatives | 0 |
 | Avg. Inference Time | ~83 ms/image (GPU) |
 
