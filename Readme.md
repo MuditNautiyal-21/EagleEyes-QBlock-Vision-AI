@@ -8,7 +8,7 @@ YOLOv8-powered quality inspection for casino payout ticket printing
 [![ONNX](https://img.shields.io/badge/ONNX_Runtime-Inference-005CED?style=for-the-badge&logo=onnx&logoColor=white)](https://onnxruntime.ai/)
 [![Accuracy](https://img.shields.io/badge/Accuracy-99.91%25-00C853?style=for-the-badge)](/)
 
-> **Capstone Project — MS Data Science, University at Buffalo**
+> **Capstone Project - MS Data Science, University at Buffalo**
 > Built for **Nissha Medical Technologies** | Team Lead: **Mudit Nautiyal**
 
 ---
