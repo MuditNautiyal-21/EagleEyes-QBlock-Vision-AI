@@ -1,4 +1,4 @@
-# 🦅 Eagle Eyes — Vision AI for Print Defect Detection
+# 🦅 Eagle Eyes - Vision AI for Print Defect Detection
 
 YOLOv8-powered quality inspection for casino payout ticket printing
 
