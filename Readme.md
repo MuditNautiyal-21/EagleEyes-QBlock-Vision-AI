@@ -15,7 +15,7 @@ YOLOv8-powered quality inspection for casino payout ticket printing
 
 ## What & Why
 
-Casino payout ticket printers produce **~30 million tickets per day** across the industry. A **4% defect rate** means over a million potentially misread tickets daily — leading to revenue disputes, regulatory risk, and customer complaints.
+Casino payout ticket printers produce **~30 million tickets per day** across the industry. A **4% defect rate** means over a million potentially misread tickets daily - leading to revenue disputes, regulatory risk, and customer complaints.
 
 **Eagle Eyes** is an automated visual inspection system that detects **Q-Block alignment markers** on printed tickets and validates print quality through a multi-gate decision pipeline. It replaces manual spot-checking with deterministic, auditable, real-time inspection.
 
