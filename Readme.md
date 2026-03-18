@@ -84,7 +84,7 @@ The real-time OpenCV dashboard shows live annotations, gate results, and decisio
 
 ![Dashboard — NG decision](GIF/dashboard_ng.png)
 
-> 🎥 *Full HD demo video coming soon — recorded on CUDA-enabled workstation*
+> 🎥 *Full HD demo video coming soon - recorded on CUDA-enabled workstation*
 
 ---
 
